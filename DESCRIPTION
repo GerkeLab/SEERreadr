@@ -1,0 +1,31 @@
+Package: readrSEER
+Title: Read SEER Fixed Width Data Files
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Garrick",
+             family = "Aden-Buie",
+             role = c("aut", "cre"),
+             email = "Garrick.Aden-Buie@moffitt.org"),
+      person(given = "Vincent",
+             family = "Major",
+             role = "aut",
+             email = "vincentmajor@nyumc.org"))
+Description: Functions to read and process the fixed width data
+    files from SEER. Includes functions to recode values based on the
+    April 2018 data dictionary.
+License: MIT + file LICENSE
+Depends: R (>= 3.3.0)
+Imports: 
+    dplyr,
+    labelled,
+    magrittr,
+    purrr,
+    readr,
+    rlang,
+    snakecase,
+    stringr,
+    tidyr
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
