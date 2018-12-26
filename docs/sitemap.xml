@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://gerkelab.com/index.html</loc>
+    <loc>https://gerkelab.github.io/SEERreadr/index.html</loc>
   </url>
   <url>
-    <loc>https://gerkelab.com/reference/SEERreadr-package.html</loc>
+    <loc>https://gerkelab.github.io/SEERreadr/reference/SEERreadr-package.html</loc>
   </url>
   <url>
-    <loc>https://gerkelab.com/reference/icdo3.html</loc>
+    <loc>https://gerkelab.github.io/SEERreadr/reference/icdo3.html</loc>
   </url>
   <url>
-    <loc>https://gerkelab.com/reference/pipe.html</loc>
+    <loc>https://gerkelab.github.io/SEERreadr/reference/pipe.html</loc>
   </url>
   <url>
-    <loc>https://gerkelab.com/reference/seer_data_dictionary.html</loc>
+    <loc>https://gerkelab.github.io/SEERreadr/reference/seer_data_dictionary.html</loc>
   </url>
   <url>
-    <loc>https://gerkelab.com/reference/seer_read_col_positions.html</loc>
+    <loc>https://gerkelab.github.io/SEERreadr/reference/seer_read_col_positions.html</loc>
   </url>
   <url>
-    <loc>https://gerkelab.com/reference/seer_read_fwf.html</loc>
+    <loc>https://gerkelab.github.io/SEERreadr/reference/seer_read_fwf.html</loc>
   </url>
   <url>
-    <loc>https://gerkelab.com/reference/seer_recode.html</loc>
+    <loc>https://gerkelab.github.io/SEERreadr/reference/seer_recode.html</loc>
   </url>
   <url>
-    <loc>https://gerkelab.com/reference/seer_rename_site_specific.html</loc>
+    <loc>https://gerkelab.github.io/SEERreadr/reference/seer_rename_site_specific.html</loc>
   </url>
 </urlset>
