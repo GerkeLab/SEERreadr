@@ -79,7 +79,8 @@ mark_usage <- function(x, direct = TRUE, lookupable = TRUE) {
 }
 
 # Get Text from PDF file --------------------------------------------------
-pdf_file <- here::here("inst", "incidence-TextData.FileDescription.pdf")
+pdf_url <- "https://seer.cancer.gov/data-software/documentation/seerstat/nov2017/TextData.FileDescription.pdf"
+pdf_file <- download_file_to_data_raw(pdf_url)
 
 txt <- pdf_text(pdf_file)
 

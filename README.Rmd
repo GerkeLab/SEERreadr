@@ -1,0 +1,75 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+library(SEERreadr)
+```
+# SEERreadr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+A small package for reading SEER fixed width files. 
+
+## Installation
+
+**SEERreadr** can be installed from GitHub with
+
+```r
+# install.packages("remotes")
+remotes::install_github("gerkelab/SEERreadr", upgrade = FALSE)
+```
+
+## What does this package do?
+
+
+### Read SEER Data Files
+
+The main workhorse of this package is `seer_read_fwf()`. 
+This function wraps `readr::read_fwf()` to import the SEER fixed-width ASCII data files, using the column names and field width definitions in the 
+[SEER SAS script](https://seer.cancer.gov/manuals/read.seer.research.nov2017.sas). 
+
+The data files are available from the 
+[SEER Data & Software page](https://seer.cancer.gov/data-software/), 
+where users must request access prior to downloading. 
+The SAS script is included in the file download, or avilable online. 
+The online version is used by `seer_read_fwf()`, but a local version can be specified in the helper function `seer_read_col_positions("local_file.sas")`.
+
+```r
+library(SEERreadr)
+x <- seer_read_fwf("incidence/yr1973_2015.seer9/MALEGEN.TXT")
+```
+
+### Recode SEER Variables
+
+Two additional functions are provided to help recode the SEER data. 
+`seer_recode()` uses the  `seer_data_dictionary` data provided in this package to automatically recode all variables with a one-to-one correspondence, for example:
+
+```{r}
+seer_data_dictionary$SEX
+```
+
+The package also includes the function `seer_rename_site_specific()` that can be used to replace the site-specific variables with their corresponding labels, formatted appropriately to serve as variable names.
+As an example, CSSSF variables for Breast cancer would be renamed according to the following table.
+
+```{r echo=FALSE}
+seer_data_dictionary$CSSSF %>% 
+  dplyr::filter(`Schema Name` == "Breast") %>% 
+  dplyr::mutate(label = snakecase::to_snake_case(label)) %>% 
+  dplyr::select(`Original Variable` = variable, `New Variable Name` = label) %>% 
+  dplyr::mutate_all(~ paste0("`", ., "`")) %>% 
+  knitr::kable()
+```
+
+## Thanks
+
+Thank you to [Vincent Major](https://github.com/vincentmajor) for making available the scripts in [SEER_read_fwf](https://github.com/vincentmajor/SEER_read_fwf), which provided a foundation for this package.

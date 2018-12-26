@@ -4,7 +4,7 @@
 #' 
 #' @param file Path to `read.seer.research.sas` file.
 #' @export
-read_seer_col_positions <- function(
+seer_read_col_positions <- function(
   file = "https://seer.cancer.gov/manuals/read.seer.research.nov2017.sas"
 ) {
   rx_start    <- "@ [[:digit:]]{1,3}"
@@ -38,7 +38,7 @@ read_seer_col_positions <- function(
 #' Read SEER Fixed Width File
 #' 
 #' Reads a SEER fixed width file using the column dictionary in the provided SAS
-#' file (see [read_seer_col_positions()] for more details). Note that the results
+#' file (see [seer_read_col_positions()] for more details). Note that the results
 #' are the raw data reported by SEER with no transformations -- all fields are
 #' imported as character strings by default. You can change this by specifying
 #' the `col_types` argument using [readr] column specification via
@@ -46,7 +46,7 @@ read_seer_col_positions <- function(
 #' column type.
 #'
 #' @param file Path to SEER fixed width file.
-#' @param col_positions SEER column positions, see [read_seer_col_positions()].
+#' @param col_positions SEER column positions, see [seer_read_col_positions()].
 #' @param use_col_desc Should the column description be used for the column
 #'   names? If `FALSE` (default), column descriptions are added as variable
 #'   labels using [labelled::var_label()].
@@ -55,9 +55,9 @@ read_seer_col_positions <- function(
 #'   [readr::read_fwf()] for further details.
 #' @inheritDotParams readr::read_fwf locale na comment skip n_max guess_max progress
 #' @export
-read_seer_fwf <- function(
+seer_read_fwf <- function(
   file,
-  col_positions = read_seer_col_positions(),
+  col_positions = seer_read_col_positions(),
   ...,
   col_types = readr::cols(.default = readr::col_character()),
   use_col_desc = FALSE

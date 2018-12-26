@@ -1,0 +1,51 @@
+url: https://gerkelab.com
+
+authors:
+  Garrick Aden-Buie:
+    href: https://www.garrickadenbuie.com
+  Vincent Major:
+    href: https://github.com/vincentmajor
+    
+template:
+  params:
+    bootswatch: lumen
+navbar:
+  structure:
+    left:
+    - home
+    - intro
+    - reference
+    - articles
+    - tutorials
+    - news
+    right: 
+    - github
+    - gerkelab
+  components:
+    home:
+      icon: fa-home fa-lg
+      href: index.html
+    gerkelab:
+      icon: fa-flask fa-lg
+      href: https://gerkelab.com
+      text: GerkeLab
+    reference:
+      text: Reference
+      href: reference/index.html
+reference:
+- title: Read SEER Data
+  desc: ~
+  contents:
+  - '`seer_read_fwf`'
+  - '`seer_read_col_positions`'
+- title: Recode SEER Data
+  desc: ~
+  contents:
+  - '`seer_recode`'
+  - '`seer_rename_site_specific`'
+- title: Related Data
+  desc: ~
+  contents:
+  - '`icdo3`'
+  - '`seer_data_dictionary`'
+  

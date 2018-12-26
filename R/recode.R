@@ -5,7 +5,7 @@
 #' 
 #' @param .data The SEER data set
 #' @export
-recode_seer <- function(.data) {
+seer_recode <- function(.data) {
   automatable <- purrr::map_lgl(seer_data_dictionary, is_directly_replaceable)
   for (column in intersect(names(.data), names(automatable))) {
     if (!is_lookupable(seer_data_dictionary[[column]])) {
@@ -19,19 +19,22 @@ recode_seer <- function(.data) {
   .data
 }
 
-#' Rename Site-Specific Variables
-#' 
-#' There are a number of variables that cover site-specific factors.
-#' This function renames those variables according the their labels.
-#' The resulting names are long but descriptive.
-#' 
-#' @param .data The SEER data set
+#' Rename SEER Site-Specific Variables
+#'
+#' There are a number of variables that cover site-specific factors. This
+#' function renames those variables according the their labels. The resulting
+#' names are long but descriptive.
+#'
+#' @param .data The SEER data set, from [read_seer_fwf()] with 
+#'   `use_col_desc = FALSE`.
 #' @param name_formatter A function that takes will be applied to the
-#'   site-specific factor descriptions to convert into valid variable
-#'   names. See [snakecase::to_snake_case()].
+#'   site-specific factor descriptions to convert into valid variable names. See
+#'   [snakecase::to_snake_case()].
 #' @export
-rename_site_specific <- function(.data, 
-                                 name_formatter = snakecase::to_snake_case) {
+seer_rename_site_specific <- function(
+  .data, 
+  name_formatter = snakecase::to_snake_case
+) {
   stopifnot("CS0204SCHEMA" %in% names(.data))
   
   # Check if the schema has been recoded
