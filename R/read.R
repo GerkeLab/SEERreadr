@@ -65,11 +65,11 @@ seer_read_fwf <- function(
   # Check that dictionary has correct columns
   expected_cols <- c("start", "end", 
                      if (use_col_desc) "col_desc" else "col_name")
-  missing_cols <- setdiff(expected_cols, names(dictionary))
+  missing_cols <- setdiff(expected_cols, names(col_positions))
   if (length(missing_cols)) {
     stop(paste(missing_cols, collapse = ", "), 
-         " required but not found in `dictionary`. ",
-         "Please use or refer to `read_seer_dictionary()`.")
+         " required but not found in `col_positions`. ",
+         "Please use or refer to `seer_read_col_positions()`.")
   }
   
   if (is.null(col_types)) col_types <- readr::cols()
