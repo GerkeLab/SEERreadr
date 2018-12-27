@@ -5,8 +5,7 @@
 \title{Read SEER Fixed Width File}
 \usage{
 seer_read_fwf(file, col_positions = seer_read_col_positions(), ...,
-  col_types = readr::cols(.default = readr::col_character()),
-  use_col_desc = FALSE)
+  col_types = readr::cols(.default = readr::col_character()))
 }
 \arguments{
 \item{file}{Path to SEER fixed width file.}
@@ -37,10 +36,6 @@ setting option \code{readr.show_progress} to \code{FALSE}.}
 \item{col_types}{Specification for column types, default is to return all
 as character strings. Use \code{NULL} to rely on \link{readr} or see
 \code{\link[readr:read_fwf]{readr::read_fwf()}} for further details.}
-
-\item{use_col_desc}{Should the column description be used for the column
-names? If \code{FALSE} (default), column descriptions are added as variable
-labels using \code{\link[labelled:var_label]{labelled::var_label()}}.}
 }
 \description{
 Reads a SEER fixed width file using the column dictionary in the provided SAS

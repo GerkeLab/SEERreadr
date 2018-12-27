@@ -119,7 +119,8 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>seer_read_col_positions</span>(<span class='kw'>file</span> <span class='kw'>=</span> <span class='st'>"https://seer.cancer.gov/manuals/read.seer.research.nov2017.sas"</span>)</pre>
+    <pre class="usage"><span class='fu'>seer_read_col_positions</span>(<span class='kw'>file</span> <span class='kw'>=</span> <span class='st'>"https://seer.cancer.gov/manuals/read.seer.research.nov2017.sas"</span>,
+  <span class='kw'>raw</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>use_col_desc</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -128,15 +129,35 @@
       <th>file</th>
       <td><p>Path to <code>read.seer.research.sas</code> file.</p></td>
     </tr>
+    <tr>
+      <th>use_col_desc</th>
+      <td><p>Should the column description be used for the column
+names? If <code>FALSE</code> (default), column descriptions are added as variable
+labels using <code><a href='https://www.rdocumentation.org/packages/labelled/topics/var_label'>labelled::var_label()</a></code>.</p></td>
+    </tr>
     </table>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>seer_col_pos</span> <span class='kw'>&lt;-</span> <span class='fu'>seer_read_col_positions</span>()
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>seer_col_pos</span>)</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 6 x 4</span><span>
+#&gt;   begin   end col_names col_labels                 
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                      
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span>     0     8 PUBCSNUM  Patient ID                 
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span>     8    18 REG       SEER registry              
+#&gt; </span><span style='color: #BCBCBC;'>3</span><span>    18    19 MAR_STAT  Marital status at diagnosis
+#&gt; </span><span style='color: #BCBCBC;'>4</span><span>    19    21 RACE1V    Race/ethnicity             
+#&gt; </span><span style='color: #BCBCBC;'>5</span><span>    22    23 NHIADE    NHIA Derived Hisp Origin   
+#&gt; </span><span style='color: #BCBCBC;'>6</span><span>    23    24 SEX       Sex                        </div><div class='input'>
+</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-                </ul>
+            
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>

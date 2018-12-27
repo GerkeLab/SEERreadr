@@ -132,8 +132,7 @@ column type.</p>
     </div>
 
     <pre class="usage"><span class='fu'>seer_read_fwf</span>(<span class='no'>file</span>, <span class='kw'>col_positions</span> <span class='kw'>=</span> <span class='fu'><a href='seer_read_col_positions.html'>seer_read_col_positions</a></span>(), <span class='no'>...</span>,
-  <span class='kw'>col_types</span> <span class='kw'>=</span> <span class='kw pkg'>readr</span><span class='kw ns'>::</span><span class='fu'><a href='https://readr.tidyverse.org/reference/cols.html'>cols</a></span>(<span class='kw'>.default</span> <span class='kw'>=</span> <span class='kw pkg'>readr</span><span class='kw ns'>::</span><span class='fu'><a href='https://readr.tidyverse.org/reference/parse_atomic.html'>col_character</a></span>()),
-  <span class='kw'>use_col_desc</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+  <span class='kw'>col_types</span> <span class='kw'>=</span> <span class='kw pkg'>readr</span><span class='kw ns'>::</span><span class='fu'><a href='https://readr.tidyverse.org/reference/cols.html'>cols</a></span>(<span class='kw'>.default</span> <span class='kw'>=</span> <span class='kw pkg'>readr</span><span class='kw ns'>::</span><span class='fu'><a href='https://readr.tidyverse.org/reference/parse_atomic.html'>col_character</a></span>()))</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -173,12 +172,6 @@ setting option <code>readr.show_progress</code> to <code>FALSE</code>.</p></dd>
       <td><p>Specification for column types, default is to return all
 as character strings. Use <code>NULL</code> to rely on readr or see
 <code><a href='https://readr.tidyverse.org/reference/read_fwf.html'>readr::read_fwf()</a></code> for further details.</p></td>
-    </tr>
-    <tr>
-      <th>use_col_desc</th>
-      <td><p>Should the column description be used for the column
-names? If <code>FALSE</code> (default), column descriptions are added as variable
-labels using <code><a href='https://www.rdocumentation.org/packages/labelled/topics/var_label'>labelled::var_label()</a></code>.</p></td>
     </tr>
     </table>
     

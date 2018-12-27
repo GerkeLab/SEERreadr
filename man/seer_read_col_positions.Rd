@@ -5,11 +5,21 @@
 \title{Read SEER Columns from SAS file}
 \usage{
 
-  seer_read_col_positions(file = "https://seer.cancer.gov/manuals/read.seer.research.nov2017.sas")
+  seer_read_col_positions(file = "https://seer.cancer.gov/manuals/read.seer.research.nov2017.sas",
+  raw = FALSE, use_col_desc = FALSE)
 }
 \arguments{
 \item{file}{Path to \code{read.seer.research.sas} file.}
+
+\item{use_col_desc}{Should the column description be used for the column
+names? If \code{FALSE} (default), column descriptions are added as variable
+labels using \code{\link[labelled:var_label]{labelled::var_label()}}.}
 }
 \description{
 Reads the SEER column specification from the SAS import file.
+}
+\examples{
+seer_col_pos <- seer_read_col_positions()
+head(seer_col_pos)
+
 }
