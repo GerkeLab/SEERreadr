@@ -9,6 +9,8 @@
 
 A small package for reading SEER fixed width files.
 
+<!-- README start -->
+
 ## Installation
 
 **SEERreadr** can be installed from GitHub with
