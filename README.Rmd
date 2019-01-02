@@ -68,7 +68,6 @@ seer_data_dictionary$CSSSF %>%
   dplyr::filter(`Schema Name` == "Breast") %>% 
   dplyr::mutate(label = snakecase::to_snake_case(label)) %>% 
   dplyr::select(`Original Variable` = variable, `New Variable Name` = label) %>% 
-  dplyr::mutate_all(~ paste0("`", ., "`")) %>% 
   knitr::kable()
 ```
 

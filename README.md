@@ -65,16 +65,16 @@ names. As an example, CSSSF variables for Breast cancer would be renamed
 according to the following
 table.
 
-| Original Variable | New Variable Name                                                     |
-| :---------------- | :-------------------------------------------------------------------- |
-| `CS1SITE`         | `estrogen_receptor_er_assay_2004`                                     |
-| `CS2SITE`         | `progesterone_receptor_pr_assay_2004`                                 |
-| `CS3SITE`         | `number_of_positive_ipsilateral_level_i_ii_axillary_lymph_nodes_2004` |
-| `CS4SITE`         | `immunohistochemistry_ihc_of_regional_lymph_nodes_2004`               |
-| `CS5SITE`         | `molecular_mol_studies_of_regional_lymph_nodes_2004`                  |
-| `CS6SITE`         | `size_of_tumor_invasive_component_2004`                               |
-| `CS7SITE`         | `nottingham_or_bloom_richardson_br_score_grade_2010`                  |
-| `CS15SITE`        | `her_2_summary_result_of_testing_2010`                                |
+| Original Variable | New Variable Name                                                             |
+| :---------------- | :---------------------------------------------------------------------------- |
+| CS1SITE           | estrogen\_receptor\_er\_assay\_2004                                           |
+| CS2SITE           | progesterone\_receptor\_pr\_assay\_2004                                       |
+| CS3SITE           | number\_of\_positive\_ipsilateral\_level\_i\_ii\_axillary\_lymph\_nodes\_2004 |
+| CS4SITE           | immunohistochemistry\_ihc\_of\_regional\_lymph\_nodes\_2004                   |
+| CS5SITE           | molecular\_mol\_studies\_of\_regional\_lymph\_nodes\_2004                     |
+| CS6SITE           | size\_of\_tumor\_invasive\_component\_2004                                    |
+| CS7SITE           | nottingham\_or\_bloom\_richardson\_br\_score\_grade\_2010                     |
+| CS15SITE          | her\_2\_summary\_result\_of\_testing\_2010                                    |
 
 ## Thanks
 
